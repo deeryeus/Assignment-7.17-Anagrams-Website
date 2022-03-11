@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+{% block container %}
+
+<h1>{{ title }}</h1>
+
+    {% if anagrams %}
+        <ul>
+            {% for word in anagrams %}
+                <li>{{ word }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+            <p>No anagrams founds :(</p>
+    {% endif %}
+        
+{% endblock %}
